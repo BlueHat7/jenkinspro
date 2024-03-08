@@ -19,7 +19,7 @@ pipeline {
             steps {
                 script {
                     docker.build('381492278384.dkr.ecr.eu-north-1.amazonaws.com/ttt')
-                    docker.withRegitry('aws-creds') {
+                    docker.withRegistry('aws-creds') {
                         docker.image('381492278384.dkr.ecr.eu-north-1.amazonaws.com/ttt').push('latest')
                     }
                 }
