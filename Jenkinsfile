@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                git 'https://github.com/BlueHat7/devopsapp.git'
+                git 'https://github.com/BlueHat7/jenkinspro.git'
             }
         }
         stage('build docker image and update ECR') {
