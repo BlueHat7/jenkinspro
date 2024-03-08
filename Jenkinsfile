@@ -10,6 +10,11 @@ pipeline {
     }
 
     stages {
+        stage('checkout') {
+            steps {
+                git branch: 'main', credentialsId: 'git-creds', url: 'https://github.com/BlueHat7/jenkinspro'
+            }
+        }
         stage('build docker image and update ECR') {
             steps {
                 script {
